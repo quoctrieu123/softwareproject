@@ -10,7 +10,8 @@ body{
 .navbar{
     display:flex;
     align-items: center;
-    padding:20px;
+    padding:10px;
+    padding-bottom: 0px;
 }
 /*nav maenu on the right as a unordered list*/
 nav{
@@ -26,6 +27,10 @@ nav ul{
 nav ul li{
     display: inline-block;
     margin-right: 50px;   
+    font-size: 20px;
+}
+nav ul li:last-child {
+    margin-right: 10px; /* Áp dụng margin-right cho mục cuối cùng trong danh sách */
 }
 /*nav maenu on the right as a vertically list with 50px gapping with each without underline*/
 a{
@@ -76,10 +81,10 @@ p{
     background: #563434;
 }
 .header{
-    background: radial-gradient(#fff, #ffd6d6);
+    background: radial-gradient(#bbaca5, #8b7f7f);
 }
 .header .row{
-    margin-top: 70px;
+    margin-top: 0px;
 }
 
 .categories{
@@ -120,7 +125,7 @@ p{
 }
 .title::after{
     content: '';
-    background: #ff523b;
+    background: #3b58ff;
     width: 80px;
     height: 5px;
     border-radius: 5px;
@@ -137,7 +142,7 @@ h4{
     font-size: 14px;
 }
 .rating .fa{
-    color: #ff523b;
+    color: #3b58ff;
 }
 .col-4:hover{
     transform:translateY(-5px);
@@ -145,7 +150,7 @@ h4{
 
 /*-----------------------offer -----------------------*/
 .offer{
-    background: radial-gradient(#fff, #ffd6d6);
+    background: radial-gradient(#90a0b4, #ffd6d6);
     margin-top: 80px;
     padding: 30px 0;
 }
@@ -212,7 +217,7 @@ small{
     background:#000; /*black;*/
     color: #8a8a8a;
     font-size: 14px;
-    padding:60px 0 20px;
+    padding:10px 0 10px;
 }
 
 .footer p{
@@ -222,26 +227,9 @@ small{
 .footer h3{
     color:#fff;
     margin-bottom: 20px;
+    align-items: center;
 }
-.footer-col-1, .footer-col-2,.footer-col-3,.footer-col-4{
-    min-width: 250px;
-    margin-bottom: 20px;
-}
-.footer-col-1{
-    flex-basis: 30%;
-}
-.footer-col-2{
-    flex: 1;
-    text-align: center;
-}
-.footer-col-2 img{
-    width: 180px;
-    margin-bottom: 20px;
-}
-.footer-col-3,.footer-col-4{
-    flex-basis: 12%;
-    text-align: center;
-}
+
 ul{
     list-style-type: none;   
 }
@@ -249,14 +237,38 @@ ul{
     margin-top: 20px;
 }
 .app-logo img{
-    width: 140px;
+    width: 120px;
 }
 
 .footer hr{
     border: none;
     background: #b5b5b5;
     height: 1px;
-    margin: 20px 0;
+    margin: 5px 0;
+}
+.footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* khoảng cách giữa các phần tử */
+  padding: 0px 0;
+  text-align: center;
+}
+
+.footer-logo {
+  height: 120px; /* tùy chỉnh kích thước logo nếu cần */
+}
+
+.footer-social {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 15px;
+}
+
+.footer-social li {
+  cursor: pointer;
 }
 .copyright{
     text-align: center;
@@ -531,4 +543,56 @@ form a{
     transform: translateX(100px);
     transition: transform 1s;
 
+}
+/* Search bar styles */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.search-bar input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-bar button {
+    background-color: #ff523b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.search-bar button i {
+    font-size: 16px;
+}
+
+.footer-row {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* khoảng cách giữa các phần tử */
+  padding: 0px 0;
+}
+
+.footer-logo {
+  height: 40px; /* tùy chỉnh kích thước logo nếu cần */
+}
+
+.footer-social {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 15px;
+}
+
+.footer-social li {
+  cursor: pointer;
 }

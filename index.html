@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width-device-width, initial-scale=1.0">
-        <title>Redstore | Ecommerce website</title>
+        <title>Shoes Website</title>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
@@ -21,21 +21,24 @@
                 </div>
                 <nav>
                     <ul id="MenuItems">
-                        <li><a href="index.html">Home</a></li>
-                         <li><a href="products.html">Products</a></li>
-                         <li><a href="">About</a></li>
-                         <li><a href="">Contact</a></li>
-                         <li><a href="account.html">Account</a></li>
-
+                        <li><a href="products.html">Men</a></li>
+                         <li><a href="products.html">Women</a></li>
+                         <li><a href="products.html">Kids</a></li>
+                         
+                         <li ><a href="aboutus.html">About Us</a></li>
                     </ul>
                 </nav>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for products..." />
+                    <button type="submit" id = "submit"><i class="fa fa-search"></i></button>
+                </div>
                 <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
                 <img src="images/menu.png" class="menu-icon" onClick="menutoggle()" >
             </div>
             <div class="row">
                 <div class="col-2">
-                    <h1>Give your Workout <br>A New Style!</h1>
-                    <p>Success isn't always about greatness. It's about consistency. Consistent<br>hard work gains success. Greatness will come.</p>
+                    <h1>Work like Ronaldo <br>To be the BOAT!</h1>
+                    <p>Ronaldo has bought here. How about you?</p>
                     <a href="products.html" class="btn">Explore Now &#8594;</a>
                 </div>
                 <div class="col-2">
@@ -44,23 +47,6 @@
             </div>
         </div>
     </div>
-        
-        <!------------------------------ featured categories------------------------------>
-        <div class="categories">
-            <div class="small-container">
-                <div class="row">
-                <div class="col-3">
-                    <img src="images/category-1.jpg">
-                </div>
-                <div class="col-3">
-                    <img src="images/category-2.jpg">
-                </div>
-                <div class="col-3">
-                    <img src="images/category-3 (2).jpg">
-                </div>
-            </div>
-            </div>
-        </div>
         
         <!------------------------------ featured Products------------------------------>
         <div class="small-container">
@@ -233,8 +219,8 @@
                     </div>
                     <div class="col-2">
                         <p>Exclusively Available on RedStore</p>
-                        <h1>Sports Shoes</h1>
-                        <small> Buy latest collections of sports shoes online on Redstore at best prices from top brands such as Adidas, Nike, Puma, Asics, and Sparx at your leisure at best prices. </small><br>
+                        <h1>Men Shoes</h1>
+                        <small>Buy the lastest men's shoes with the cheapest price! Varies from different brands: Nike, Adidas, Puma, Lining,...</small><br>
                         <a href="products.html" class="btn">Buy Now &#8594;</a>
                     </div>
                 </div>
@@ -243,37 +229,24 @@
         
         
         <!----------------------------------footer------------------------------------->
-        <div class ="footer">
-        <div class="container">
-            
-            <div class="row">
-                <div class="footer-col-2">
-                    <img src="images/logo-white.png">
-                    <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
-                </div>
-                <div class="footer-col-3">
-                    <h3>Useful Links</h3>
-                   <ul>
-                       <li>Coupons</li>
-                       <li>Blog Post</li>
-                       <li>Return Policy</li>
-                       <li>Join Affiliate</li>
-                    </ul>
-                </div>
-                <div class="footer-col-4">
-                    <h3>Follow us</h3>
-                   <ul>
-                       <li>Facebook</li>
-                       <li>Twitter</li>
-                       <li>Instagram</li>
-                       <li>Youtube</li>
-                    </ul>
-                </div>
-                
-            </div>
+        <div class="footer">
+  <div class="container">
+    <div class="footer-row">
+      <img src="images\logo.png" alt="Logo" class="footer-logo">
+
+      <ul class="footer-social">
+        <li>Facebook</li>
+        <li>Twitter</li>
+        <li>Instagram</li>
+        <li>Youtube</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
             
             <hr><!--horizontal line-->
-            <p class="copyright">Copyright 2024 - Intro to Software Team</p>
+            <p class="copyright">Capstone Project Intro to Software - IT3180E</p>
             
         </div>
     </div>
@@ -292,6 +265,14 @@
                     MenuItems.style.maxHeight="0px";
                 }
             }
+            var submit = document.getElementById("submit");
+            submit.addEventListener("click", function() {
+                var searchInput = document.querySelector(".search-bar input");
+                var searchQuery = searchInput.value;
+                if (searchQuery) {
+                    window.location.href = "products.html";
+                }
+            });
         </script>
     </body>
 </html>
